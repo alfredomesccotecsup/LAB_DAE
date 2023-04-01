@@ -1,0 +1,32 @@
+<div class="row mb-3">
+    <h2>{{ titulo }}</h2>
+</div>
+<form class="row g-3" action="{% url 'operaciones01:calculado' %}" method="post">
+    {% csrf_token %}
+    <div class="row mb-3">
+        <label >Primer Numero:</label>
+        <div class="col-sm-5">
+            <input type="number" class="form-control" id="inputName3" name="num1" style="border: 1px solid rgb(145, 140, 140);" required>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label>Segundo Numero:</label>
+        <div class="col-sm-5">
+            <input type="number" class="form-control" id="inputPassword3" name="num2" style="border: 1px solid rgb(145, 140, 140);" required>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label>Selecciona la operacion a realizar:</label>
+        <div class="col-sm-5">
+            <select class="form-select" aria-label="Default select example" name="operador" style="border: 1px solid rgb(145, 140, 140);" aria-required="true">
+                <option selected>operacion</option>
+                <option value="suma">Suma</option>
+                <option value="resta">Resta</option>
+                <option value="multiplicacion">Multiplicar</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary col-sm-2">Calcular</button>
+</form>

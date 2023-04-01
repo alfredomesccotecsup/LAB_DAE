@@ -1,0 +1,21 @@
+<form method="post">
+    {% csrf_token %}
+
+    
+<table width="500" cellspacing="1" cellpadding="3" border="0" bgcolor="#1E679A">
+    <tr>
+       <td><font color="#FFFFFF" face="arial, verdana, helvetica">
+    <b>CALCULO DEL VOLUMEN DE UN CILINDRO</b>
+       </font></td>
+    </tr>
+    <tr>
+       <td bgcolor="#ffffcc">
+       <font face="arial, verdana, helvetica">
+        {{ form.as_p }}
+        <button type="submit">Calcular</button>
+       </font>
+       </td>
+    </tr>
+    
+    </table>
+</form>
